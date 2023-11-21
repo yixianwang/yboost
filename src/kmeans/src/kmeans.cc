@@ -5,7 +5,7 @@
 
 int main(int argc, char** argv) {
   // parse args
-  Options opts;
+  struct Options opts;
   GetOpts(argc, argv, &opts);
 
   // declare input and output into 1d array
@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
   double* centroids;
 
   // read input data
-  ReadFile(&opts, &n_vals, &input_vals, &centroids);
+  ReadFile(opts, n_vals, input_vals, centroids);
 
   int* cluster_of_point;
   cluster_of_point = (int*) malloc(n_vals * sizeof(int));

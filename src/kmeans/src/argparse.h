@@ -14,4 +14,4 @@ struct Options {
   int implementation;
 };
 
-void GetOpts(int, char**, Options*);
+void GetOpts(int, char**, struct Options*);
