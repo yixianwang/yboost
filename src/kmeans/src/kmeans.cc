@@ -22,7 +22,8 @@ int main(int argc, char** argv) {
   Result result;
   static auto start = std::chrono::high_resolution_clock::now();
   if (opts.implementation == 3) { // sequential
-	  // result = sequential_kmeans(input_vals, centroids, cluster_of_point, n_vals, opts.num_cluster, opts.dims, opts.max_num_iter, opts.threshold);
+	  // result = sequential_kmeans(input_vals, centroids, cluster_of_point, 
+    // n_vals, opts.num_cluster, opts.dims, opts.max_num_iter, opts.threshold);
     for (int i = 0; i < n_vals * opts.dims; ++i) {
       std::cout << input_vals[i] << " ";
     }

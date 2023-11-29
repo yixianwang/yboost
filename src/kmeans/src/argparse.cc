@@ -30,35 +30,36 @@ void GetOpts(int argc, char** argv, Options* opts) {
   int ind, cc;
   while ((cc = getopt_long(argc, argv, "k:d:i:m:t:s:p:c", l_opts, &ind)) != -1) {
     switch (cc) {
-    case 0:
-      break;
-    case 'k':
-      opts->num_cluster = atoi((char *)optarg);
-      break;
-    case 'd':
-      opts->dims = atoi((char *)optarg);
-      break;
-    case 'i':
-      opts->in_file = (char *)optarg;
-      break;
-    case 'm':
-      opts->max_num_iter = atoi((char *)optarg);
-      break;
-    case 't':
-      opts->threshold = atof((char *)optarg);
-      break;
-    case 's':
-      opts->seed = atoi((char *)optarg);
-      break;
-    case 'p':
-      opts->implementation = atoi((char *)optarg);
-      break;
-    case 'c':
-      opts->c = true;
-      break;
-    case ':':
-      std::cerr << argv[0] << ": option -" << (char)optopt << "requires an argument." << std::endl;
-      exit(1);
+      case 0:
+        break;
+      case 'k':
+        opts->num_cluster = atoi((char *)optarg);
+        break;
+      case 'd':
+        opts->dims = atoi((char *)optarg);
+        break;
+      case 'i':
+        opts->in_file = (char *)optarg;
+        break;
+      case 'm':
+        opts->max_num_iter = atoi((char *)optarg);
+        break;
+      case 't':
+        opts->threshold = atof((char *)optarg);
+        break;
+      case 's':
+        opts->seed = atoi((char *)optarg);
+        break;
+      case 'p':
+        opts->implementation = atoi((char *)optarg);
+        break;
+      case 'c':
+        opts->c = true;
+        break;
+      case ':':
+        std::cerr << argv[0] << ": option -" << (char)optopt << "requires an \
+        argument." << std::endl;
+        exit(1);
     }
   }
 }
